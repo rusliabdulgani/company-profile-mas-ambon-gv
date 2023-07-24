@@ -55,7 +55,10 @@ export function Header() {
 
   return (
     <header className={scrolled ? 'header scrolled' : 'header'}>
-      <div className='logo'>
+      <div className='logo' onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        event.preventDefault()
+        smoothScroll("#home")
+      }}>
         <img src={logo} alt='Company Logo' />
         <h4>Company Logo</h4>
       </div>
