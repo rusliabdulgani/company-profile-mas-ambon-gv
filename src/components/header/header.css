@@ -1,0 +1,65 @@
+.header {
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  color: #333;
+  padding: 20px 30px;
+  position: sticky;
+  transition: background-color 0.5s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  /* Change the background color to white (#fff) */
+  /* Change the text color to black (#333) or any other color you prefer */
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 30px;
+  /* Adjust the height as needed */
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  margin-left: 20px;
+  /* Adjust the spacing between menu items */
+}
+
+.navigation li:first-child {
+  margin-left: 0;
+  /* Remove left margin for the first menu item */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Additional styles for the links when scrolled */
+.navigation.scrolled a {
+  color: #333;
+  /* Change the link color to red (#f00) or any other color you prefer */
+}
+
+.navigation a:hover {
+  color: rgb(0, 89, 255);
+  /* Adjust the color for the hover state */
+}
