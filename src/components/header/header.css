@@ -97,6 +97,10 @@
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
+  .header {
+    padding: 5px 10px;
+  }
+
   .menu {
     display: none;
   }
