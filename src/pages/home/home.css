@@ -40,7 +40,7 @@
 
   .upper {
     flex-direction: column;
-    padding: 0;
+    padding: 0 30px;
     align-items: center;
   }
 
