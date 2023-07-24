@@ -4,6 +4,7 @@ import logo from '../../assets/company_logo.svg';
 
 export function Header() {
   const [scrolled, setScrolled] = useState<boolean>(false)
+  const [menuActive, setMenuActive] = useState<boolean>(false)
 
   useEffect(() => {
     // Function to add the 'scrolled' class to the header and navigation when scrolled down
@@ -38,6 +39,11 @@ export function Header() {
     }
   };
 
+  const handleBurgerClick = () => {
+    setMenuActive((prevMenuActive) => !prevMenuActive);
+  };
+
+
   // Event handler for navigation links
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
@@ -54,7 +60,13 @@ export function Header() {
         <h4>Company Logo</h4>
       </div>
       <nav className={scrolled ? 'navigation scrolled' : 'navigation'}>
-        <ul>
+        <div className={`burger${menuActive ? ' active' : ''}`} id="burger" onClick={handleBurgerClick}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <ul className={`menu${menuActive ? ' active' : ''}`} id="menu">
           <li><a href='#home' onClick={handleLinkClick}>Home</a></li>
           <li><a href='#about' onClick={handleLinkClick}>About</a></li>
           <li><a href='#services' onClick={handleLinkClick}>Services</a></li>
